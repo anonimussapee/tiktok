@@ -1,4 +1,5 @@
 import './App.css';
+import VideoPlayer from './components/VideoPlayer';
 
 function App() {
 
@@ -7,7 +8,7 @@ function App() {
 
       <main>
         
-        TIKTOK
+        <VideoPlayer/>
 
       </main>
     </div>
