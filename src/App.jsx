@@ -1,5 +1,6 @@
 import './App.css';
-import VideoPlayer from './components/VideoPlayer';
+import FeedVideos from './components/FeedVideos';
+// import VideoPlayer from './components/VideoPlayer';
 
 function App() {
 
@@ -8,7 +9,7 @@ function App() {
 
       <main>
         
-        <VideoPlayer/>
+        <FeedVideos/>
 
       </main>
     </div>

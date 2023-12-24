@@ -2,11 +2,10 @@ import {PlayIcon} from '@heroicons/react/24/solid';
 import styles from './index.module.css';
 import { useRef, useState } from 'react';
 
-const SRC = "https://jobsrv.netlify.app/src/video/reel.mp4";
 
 
 
-export default function VideoPlayer (){
+export default function VideoPlayer ({src}){
 
   const [playing, setPLaying] = useState(false);
   const video = useRef();
@@ -26,11 +25,17 @@ export default function VideoPlayer (){
       <video 
         ref={video}
         className={styles.video} 
-        src={SRC} 
+        src={src} 
+        loop
         controls={false}
+        onClick={handlePlay}
       />
       {
-        <PlayIcon className={styles.player} onClick={handlePlay}/>
+        !playing &&
+        <PlayIcon
+          className={styles.player} 
+          onClick={handlePlay}
+        />
       }
     </div>
   )
